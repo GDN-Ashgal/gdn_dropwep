@@ -12,7 +12,7 @@ AddEventHandler('dropweapon', function()
 	local wep = GetSelectedPedWeapon(ped)
 
 	if DoesEntityExist(ped) and not IsEntityDead(ped) then
-		SetPedDropsInventoryWeapon(GetPlayerPed(-1), wep, 0, 1.0, 0, 0) --drop weapon on the ground
+		SetPedDropsInventoryWeapon(GetPlayerPed(-1), wep, 0, 2.0, 0, 1) --drop weapon on the ground
 		GiveWeaponToPed(ped, 0xA2719263, 0, 0, 1) --set unarmed
 		ShowNotification("~w~Vous avez lâché votre ~r~arme ~w~au sol.") -- EN: ~w~You dropped your ~r~weapon ~w~on the ground
 	end
